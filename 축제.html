@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>이것은 연습이다</title>
+    <title>축제 페이지</title>
     <style>
       * {
         margin: 0;
@@ -11,6 +11,7 @@
         list-style: none;
         text-decoration: none;
       }
+      /* ====================================header style 시작 ==========================*/
       .header {
         background-color: lightcoral;
       }
@@ -135,17 +136,102 @@
         outline: none;
         cursor: pointer;
       }
-      .carousel {
+      /* ====================================header style 끝 ==========================*/
+      /* ================================main style 시작============================== */
+      .sns-icon-btn img {
+        width: 30px;
+        height: 30px;
+        margin: 0 3px;
+      }
+      .style-reset-btn {
+        background-color: #ffffff00;
+        border: none;
+      }
+      .intro-banner {
+        background: url(https://www.gimhae.go.kr/_res/tour/img/inc/v1p02.jpg)
+          center / cover no-repeat;
+      }
+      .page-banner {
+        height: 200px;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        margin-bottom: 20px;
       }
-      .main-content-wrap {
+      .page-banner .page-title {
+        font-size: 36px;
+        font-weight: 700;
         position: relative;
-        width: 1920px;
+        z-index: 2;
+      }
+      .content-header-wrapper {
+        max-width: 1200px;
         margin: 0 auto;
+        padding: 20px 30px 40px 40px;
       }
-      .main-visual {
-        overflow: hidden;
+      .content-header-wrapper > .content-title {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: solid 1px #bfbfbf;
       }
+      .content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0px 40px;
+      }
+      h2 {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+      }
+
+      /* main content-wrapper style  시작*/
+      .content-wrapper {
+        margin: 0 auto;
+        padding: 0 40px;
+      }
+      .content-select-wrapper {
+        background-color: rgb(156, 250, 192);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #ccc;
+        padding: 15px;
+      }
+      .label-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        width: 60%;
+      }
+
+      /* main content-wrapper style  끝*/
+      /* main filter-options style 시작*/
+      .filter-options {
+        text-align: right;
+        font-size: 15px;
+        color: #777;
+        margin-bottom: 20px;
+        border-bottom: solid 1px #bfbfbf;
+        padding-top: 30px;
+        padding-bottom: 10px;
+      }
+      /* main filter-options style 끝*/
+      /* main content-item-wrapper 시작 */
+      .content-item-wrapper {
+        background-color: #0057b8;
+        padding: 20px 0;
+      }
+
+      /* main content-item-wrapper 끝 */
+      /* ================================main style  끝============================== */
+      /* ====================================footer style 시작 ==========================*/
       .footer {
         color: #fff;
         font-size: 14px;
@@ -197,144 +283,14 @@
         width: 220px;
         height: 50px;
       }
-      .main-visual {
-        width: 100%;
-        height: 720px;
-        margin: 0 auto;
+      .content-item-imgSize {
+        width: 299px;
+        height: 200px;
       }
-      .main-content-wrap {
-        max-width: 1920px;
-        margin: 0 auto;
-        height: 100%;
-        overflow: hidden;
-        isolation: isolate;
-        contain: paint;
-      }
-      .carousel-controls-hover {
-        max-width: 1280px;
-        display: flex;
-        justify-content: space-between;
-        position: absolute;
-        bottom: 40%;
-        margin: 0 auto;
-        z-index: 999;
-      }
-      .carousel-controls-hover #main-prev {
-        border: 2px solid transparent;
-        background-color: #ffffff00;
-
-        position: relative;
-        left: 300px;
-      }
-      .carousel-controls-hover #main-prev:active {
-        background-color: #ffffff00;
-        border: 2px dotted red;
-      }
-
-      .carousel-controls-hover #main-next {
-        border: 2px solid transparent;
-        background-color: #ffffff00;
-
-        position: relative;
-        left: 1500px;
-      }
-
-      .carousel-controls-hover #main-next:active {
-        background-color: #ffffff00;
-        border: 2px dotted red;
-      }
-      img {
-        overflow-clip-margin: content-box;
-        overflow: clip;
-      }
-      .content-wrapper {
-        display: flex;
-        justify-content: center;
-        text-align: left;
-      }
-      .notice-area .more-btn {
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        background: none;
-        border: 1px solid #ccc;
-        color: #222;
-        width: 25px;
-        height: 25px;
-        font-size: 16px;
-        line-height: 20px;
-        text-align: center;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      .info-utility {
-        padding: 60px 40px;
-        background: #fff;
-      }
-      .info-utility .content-wrapper {
-        max-width: 1100px;
-        margin: 0 auto;
-        display: flex;
-        gap: 30px;
-      }
-      .notice-area {
-        flex: 2;
-        border: 1px solid #ddd;
-        padding: 30px;
-        position: relative;
-      }
-      .notice-area .section-title-small {
-        font-size: 22px;
-        text-align: left;
-        margin-bottom: 20px;
-        color: #222;
-        font-weight: bold;
-      }
-      .notice-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .notice-list li {
-        font-size: 15px;
-        padding: 8px 0;
-        border-bottom: 1px dashed #eee;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-      .utility-area {
-        flex: 1;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 5px;
-      }
-      .utility-item {
-        background: #673ab7;
-        color: #fff;
-        text-align: center;
-        padding: 20px 10px;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 500;
-        transition: background 0.3s;
-        width: 250px;
-      }
-      .utility-item .icon-wrap {
-        margin-bottom: 5px;
-        height: 70px;
-      }
-      .utility-item img {
-        height: 100%;
-      }
-      .utility-item .icon-wrap {
-        margin-bottom: 5px;
-        height: 70px;
-      }
+      /* ====================================footer style 끝 ==========================*/
     </style>
   </head>
   <body>
-    <!-- ============================= header 시작=============================== -->
     <header class="header">
       <div class="header-list-wrap">
         <div class="header-list">
@@ -420,7 +376,7 @@
       <div class="header-bottom">
         <nav class="nav">
           <ul class="nav-menu">
-            <li><a href="./소개.html">소개</a></li>
+            <li><a href="intro.html">소개</a></li>
             <li><a href="festival.html">축제</a></li>
             <li><a href="tour.html">여행지</a></li>
             <li><a href="heritage.html">문화유산</a></li>
@@ -441,120 +397,125 @@
     <!-- ============================= header 끝=============================== -->
     <!-- ============================= main 시작=============================== -->
     <main>
-      <section class="main-visual">
-        <div class="main-content-wrap">
-          <div class="carousel-controls-hover">
-            <button class="carousel-controls-btn" id="main-prev">
-              <img src="https://nextit.or.kr:48080/images/prev-btn.png" />
-            </button>
-            <button class="carousel-controls-btn" id="main-next">
-              <img src="https://nextit.or.kr:48080/images/next-btn.png" />
-            </button>
-          </div>
-          <ul
-            class="main-content-wrapper"
-            id="main-content-wrapper"
-            style="transform: translate3d(0px, 0px, 0px)"
-          >
-            <li>
-              <div class="main-card">
-                <img
-                  src="https://nextit.or.kr:48080/images/v20250103_01.jpg"
-                  alt="김해 관광 대표 이미지"
-                  width="1920"
-                  height="720"
-                />
-              </div>
-            </li>
-            <li>
-              <div class="main-card">
-                <img
-                  src="https://nextit.or.kr:48080/images/v20250103_02.jpg"
-                  alt="김해 관광 대표 이미지"
-                  width="1920"
-                  height="720"
-                />
-              </div>
-            </li>
-            <li>
-              <div class="main-card">
-                <img
-                  src="https://nextit.or.kr:48080/images/v20250103_03.jpg"
-                  alt="김해 관광 대표 이미지"
-                  width="1920"
-                  height="720"
-                />
-              </div>
-            </li>
-          </ul>
+      <div class="content-header">
+        <div class="page-banner intro-banner">
+          <h1 class="page-title">요즘 김해</h1>
         </div>
-      </section>
-      <!-- ==============================================마지막 섹션=========================================-->
-      <section class="info-utility">
-        <div class="content-wrapper">
-          <div class="notice-area">
-            <h2 class="section-title-small">공지사항</h2>
-            <button class="more-btn">+</button>
-            <ul class="notice-list">
-              <li>
-                경남에서 한 달 여행하기 '아름다운 김해' 참가자 모집 (D-day 8)
-              </li>
-              <li>경남에서 한 달 여행하기 '아름다운 김해' 2차 참가자 모집</li>
-              <li>
-                경남에서 한 달 여행하기 '김해에 반해' 참가자 모집 공고(2차)
-              </li>
-              <li>2024년 김해DMZ 관광콘텐츠에 역량강화된 교육 신청 안내</li>
-              <li>
-                경남에서 한 달 여행하기 '김해에 반해' 참가자 모집 공고(2차)
-              </li>
-            </ul>
+        <div class="content-header-wrapper">
+          <div class="content-title">
+            <div>
+              <h2>요즘 김해</h2>
+            </div>
+            <div class="sns-share">
+              <button class="sns-icon-btn style-reset-btn">
+                <img
+                  src="https://nextit.or.kr:48080/images/bn1blog@2x.png"
+                  alt="B"
+                />
+              </button>
+              <button class="sns-icon-btn style-reset-btn">
+                <img
+                  src="https://nextit.or.kr:48080/images/bn1facebook@2x.png"
+                  alt="F"
+                />
+              </button>
+              <button class="sns-icon-btn style-reset-btn">
+                <img
+                  src="https://nextit.or.kr:48080/images/bn1twitter@2x.png"
+                  alt="T"
+                />
+              </button>
+              <button class="sns-icon-btn style-reset-btn">
+                <img
+                  src="https://nextit.or.kr:48080/images/bn1kakaotalk@2x.png"
+                  alt="K"
+                />
+              </button>
+              <button class="sns-icon-btn style-reset-btn">
+                <img
+                  src="https://nextit.or.kr:48080/images/bn1pdf@2x.png"
+                  alt="P"
+                />
+              </button>
+              <button class="sns-icon-btn style-reset-btn">
+                <img
+                  src="https://nextit.or.kr:48080/images/bn1link@2x.png"
+                  alt="A"
+                />
+              </button>
+              <button class="sns-icon-btn style-reset-btn">
+                <img
+                  src="https://nextit.or.kr:48080/images/bn1print.png"
+                  alt="S"
+                />
+              </button>
+            </div>
           </div>
+        </div>
+      </div>
+      <!-- main content-wrapper 시작-->
+      <div class="content-wrapper">
+        <div class="content-select-wrapper">
+          <p>총 <span style="color: red">10</span>건의 게시물이 있습니다</p>
+          <form class="label-wrapper">
+            <label for="category">
+              축제 분류
+              <select name="category" id="category">
+                <option value="전체">전체</option>
+              </select>
+            </label>
 
-          <div class="utility-area">
-            <a
-              href="https://www.gimhae.go.kr/00558.web?amode=view&amp;idx=575&amp;"
-              class="utility-item"
-            >
-              <div class="icon-wrap">
-                <img
-                  src="https://nextit.or.kr:48080/images/menu9p01@2x.png"
-                  alt="종합관광안내소 아이콘"
-                />
+            <label for="limitSize">
+              한번에 보고 싶은 갯수
+              <select name="limitSize" id="limitSize">
+                <option value="5" selected>5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+              </select>
+            </label>
+
+            <label for="pagingSize">
+              페이지 갯수
+              <select name="pagingSize" id="pagingSize">
+                <option value="5" selected>5</option>
+              </select>
+            </label>
+          </form>
+        </div>
+        <div class="filter-options">
+          <span class="active">✔ 추천순</span> | <span>가나다순</span> |
+          <span>평점순</span>
+        </div>
+        <div class="content-item-wrapper">
+          <div class="content-item">
+            <div class="content-img">
+              <a href="#"
+                ><img
+                  class="content-item-imgSize"
+                  src="http://www.gimhae.go.kr/CmsMultiFile/view.do?multifileId=MF00000422&idx=4114"
+                  alt=""
+              /></a>
+            </div>
+            <div class="content-text">
+              <div class="content-text-title">
+                <div class="text-number">1</div>
+                <h3>가야문화축제</h3>
               </div>
-              <p>종합관광안내소</p>
-            </a>
-            <a href="https://www.gimhae.go.kr/00559.web" class="utility-item">
-              <div class="icon-wrap">
-                <img
-                  src="https://nextit.or.kr:48080/images/menu9p02@2x.png"
-                  alt="전화 아이콘"
-                />
-              </div>
-              <p>1330관광안내전화</p>
-            </a>
-            <a href="https://www.gimhae.go.kr/00567.web" class="utility-item">
-              <div class="icon-wrap">
-                <img
-                  src="https://nextit.or.kr:48080/images/menu9p03@2x.png"
-                  alt="지도 아이콘"
-                />
-              </div>
-              <p>관광안내책자</p>
-            </a>
-            <a href="https://www.gimhae.go.kr/00578.web" class="utility-item">
-              <div class="icon-wrap">
-                <img
-                  src="https://nextit.or.kr:48080/images/menu9p04@2x.png"
-                  alt="Q&amp;A 아이콘"
-                />
-              </div>
-              <p>Q&amp;A</p>
-            </a>
+              <ul>
+                <li>축제기간: 2025-04-10부터 ~ 2025-04-13까지</li>
+                <li>
+                  행사장소: 경상남도 김해시 가야의길 126 (대성동) 김해시 일원
+                </li>
+                <li>관리기관: (사)가야문화축제제전위원회</li>
+                <li>전화번호: 055-330-6840</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+      <!-- main content-wrapper 끝-->
     </main>
-    <!-- ============================= main 끝 =============================== -->
+    <!--============================= main 끝 ==============================-->
     <!--============================= footer 시작 ==============================-->
     <footer class="footer">
       <div class="footer-top">
@@ -613,42 +574,5 @@
       <!-- <button class="footer-top-btn">TOP</button> -->
     </footer>
     <!--===============================footer 끝=================================-->
-
-    <!-- ============================= script 시작=============================== -->
-    <!-- <script>
-      let carousel = null;
-      let index = 0;
-      let carouselSize = 0;
-
-      window.onload = () => {
-        const prev = document.getElementById("main-prev")[0];
-        const next = document.getElementsByById("main-next")[0];
-
-        carousel = document.getElementsByClassName("main-card")[0];
-        carouselSize = document.getElementsByTagName("img").length;
-
-        console.log("오른쪽으로 가는 버튼");
-        console.log(next);
-
-        next.addEventListener("click", () => {
-          //현재 슬라이드 위치가 끝에 도달하지 않았..
-          if (index < carouselSize - 1) {
-            carousel.style.transform = `translate3d(-${600 * index}px, 0, 0)`;
-            index++;
-          } else {
-            index = 0;
-          }
-        });
-
-        prev.addEventListener("click", () => {
-          if (0 < index) {
-            index--;
-            carousel.style.transform = `translate3d(-${600 * index}px, 0, 0)`;
-          } else {
-            index = carouselSize - 1;
-          }
-        });
-      };
-    </script> -->
   </body>
 </html>
