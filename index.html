@@ -612,43 +612,34 @@
       </div>
       <!-- <button class="footer-top-btn">TOP</button> -->
     </footer>
-    <!--===============================footer 끝=================================-->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const carousel = document.getElementById("main-content-wrapper");
+        const slides = document.querySelectorAll(".main-card img");
+        const prevBtn = document.getElementById("main-prev");
+        const nextBtn = document.getElementById("main-next");
 
-    <!-- ============================= script 시작=============================== -->
-    <!-- <script>
-      let carousel = null;
-      let index = 0;
-      let carouselSize = 0;
+        let index = 0;
+        const total = slides.length;
+        const width = 1920; // 한 장의 이미지 폭
 
-      window.onload = () => {
-        const prev = document.getElementById("main-prev")[0];
-        const next = document.getElementsByById("main-next")[0];
+        // 🔹 슬라이드 이동 함수
+        const showSlide = () => {
+          carousel.style.transform = `translate3d(-${index * width}px, 0, 0)`;
+        };
 
-        carousel = document.getElementsByClassName("main-card")[0];
-        carouselSize = document.getElementsByTagName("img").length;
-
-        console.log("오른쪽으로 가는 버튼");
-        console.log(next);
-
-        next.addEventListener("click", () => {
-          //현재 슬라이드 위치가 끝에 도달하지 않았..
-          if (index < carouselSize - 1) {
-            carousel.style.transform = `translate3d(-${600 * index}px, 0, 0)`;
-            index++;
-          } else {
-            index = 0;
-          }
+        // 🔹 다음 버튼
+        nextBtn.addEventListener("click", () => {
+          index = (index + 1) % total;
+          showSlide();
         });
 
-        prev.addEventListener("click", () => {
-          if (0 < index) {
-            index--;
-            carousel.style.transform = `translate3d(-${600 * index}px, 0, 0)`;
-          } else {
-            index = carouselSize - 1;
-          }
+        // 🔹 이전 버튼
+        prevBtn.addEventListener("click", () => {
+          index = (index - 1 + total) % total;
+          showSlide();
         });
-      };
-    </script> -->
+      });
+    </script>
   </body>
 </html>
